@@ -98,23 +98,44 @@ div.main-content {
 /*Part 1: Stories*/
 
 div.stories {
+  display: flex;
+  /*align-items: center;*/
+}
+
+div.featured {
+  width: 60%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+div.featured-imagebox {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+div.featured-imagebox img {
+  width: 100%;
+}
+
+/*div.stories .small-stories {
+
+}*/
+
+div.small-story {
+  display: flex;
+  width: 27rem;
 
 }
 
-div.stories .featured {
-
+div.small-story .story-image {
+  width: 30%;
+  margin: 1rem;
 }
 
-div.stories .small-stories {
-
-}
-
-div.story-image {
-
-}
-
-div.story-text {
-
+div.story-image img {
+  width: 100%;
 }
 
 /*Part 2: Learning*/

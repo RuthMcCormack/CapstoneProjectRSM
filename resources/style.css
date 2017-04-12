@@ -1,61 +1,92 @@
 html {
+  font-size: 16px;
+  font-family: "Libre Franklin"
+}
 
+div {
+  border: medium solid red;
 }
 
 /*Header*/
 
 .header {
-
+  display: flex;
+  width: auto;
+  margin: auto;
+  height: 4rem;
+  background-color: white;
+  border-bottom: thin solid gray;
+  justify-content: space-between;
 }
 
 div.logo {
-
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+  font-weight: bold;
 }
 
-div.logo img {
-
+div.logo span {
+  font-weight: 300;
+  color: gray;
 }
 
 div.contents {
-
+display: flex;
+align-items: center;
+padding-right: 1.5rem;
 }
 
-div.contents p {
-
+div.contents span {
+  padding-left: 1rem;
 }
 
 /*Banner*/
 
 div.banner {
+  display: flex;
+  background-color: lightgray;
+  align-items: center;
 
 }
 
 div.banner .imagebox {
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 2.5rem;
+  width: 60%;
+}
 
+div.imagebox img {
+  width: 100%;
 }
 
 div.banner .textbox {
-
+  margin-right: 4.5rem;
+  color: #5C5D5D;
+  width: 25%;
 }
 
 div.headline {
-
-}
-
-div.headline h1 {
-
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 div.headline h3 {
-
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 div.button {
-
+  background-color: #5C5D5D;
+  color: white;
+  text-align: center;
 }
 
 div.button p {
-
+  padding-top: .5rem;
+  padding-bottom: .5rem;
 }
 
 /*Main Content (whole section)*/

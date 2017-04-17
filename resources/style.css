@@ -3,9 +3,6 @@ html {
   font-family: "Libre Franklin"
 }
 
-/*div {
-  border: medium solid red;
-}*/
 
 /*Header*/
 
@@ -41,13 +38,42 @@ div.contents span {
   padding-left: 1rem;
 }
 
+div.contents-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  div.logo {
+    display: none;
+  }
+
+  div.contents {
+    display: none;
+  }
+
+  div.contents-icon {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding-right: 2rem;
+  }
+
+  div.contents-icon span {
+    padding-left: 2rem;
+  }
+
+}
+
 /*Banner*/
+
+div.blank-banner {
+  display: none;
+}
 
 div.banner {
   display: flex;
   background-color: lightgray;
   align-items: center;
-
 }
 
 div.banner .imagebox {
@@ -89,6 +115,54 @@ div.button p {
   padding-bottom: .5rem;
 }
 
+
+@media only screen and (max-width: 800px) {
+    div.banner .textbox{
+      margin-right: 2.5rem;
+    }
+
+    div.textbox .headline{
+      font-size: 1.5rem;
+    }
+    div.textbox .subpoint, .button{
+      font-size: .75rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+  div.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div.banner .imagebox {
+    display: none;
+  }
+
+  div.blank-banner {
+    display: block;
+    background-color: #5C5D5D;
+    min-height: 11.5rem;
+  }
+
+  div.banner .textbox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    padding: 2rem 0rem;
+  }
+
+  div.button {
+    width: 80%;
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
 /*Main Content (whole section)*/
 
 div.main-content {
@@ -99,6 +173,7 @@ div.main-content {
 
 div.stories {
   display: flex;
+  border: 1px solid lightgray;
 }
 
 div.featured {
@@ -128,9 +203,20 @@ div.featured-textbox .quote {
   font-weight: lighter;
 }
 
+div.small-stories {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+}
+
+div.story-image .mobile {
+  display: none;
+}
+
 div.small-story {
   display: flex;
-  width: 27rem;
+  border: 1px solid lightgray;
   flex: 1 1 auto;
 }
 
@@ -159,6 +245,60 @@ div.story-text a {
   text-decoration: none;
 }
 
+@media only screen and (max-width: 800px){
+  div.featured h2 {
+    font-size: 1.5rem;
+  }
+  div.featured p {
+    font-size: .75rem;
+  }
+
+  div.small-story h3, p, a {
+    font-size: .75rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  div.featured {
+    display: none;
+  }
+  div.story-image .desktop {
+    display: none;
+  }
+
+  div.story-image .mobile {
+    display: block;
+  }
+
+  div.small-stories {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  div.small-story {
+    display: block;
+    border: 1px none white;
+  }
+
+  div.small-story .story-image {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div.small-story .story-text {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  div.story-text h3 {
+    font-size: 1.25rem;
+  }
+
+}
+
 /*Part 2: Learning*/
 
 div.StayLearning {
@@ -183,7 +323,7 @@ div.ClassesContainer {
 }
 
 div.ClassBox {
-  width: 25%;
+  max-width: 25%;
   margin-left: 1rem;
   margin-right: 1rem;
   margin-bottom: 2rem;
@@ -215,11 +355,44 @@ div.ClassText p {
   padding: 1rem;
 }
 
+div.Mobile {
+  display: none;
+}
+
+@media only screen and (max-width:800px) {
+  .StayLearningText p {
+    font-size: 1.5rem;
+  }
+  div.ClassText h3 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  div.ClassesContainer {
+    display: none;
+  }
+  div.Mobile {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  div.StayLearning {
+    background-color: white;
+  }
+  div.Mobile .Online-Class {
+    background-color: lightgray;
+    width: 90%;
+    margin: .5rem auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  div.Online-Class span {
+    padding: 1rem 0rem 1rem 1rem;
+  }
+}
+
 /*Part 3: Thesis*/
 
-div.Thesis-Section {
-
-}
 
 div.ThesisTitle {
   width: 100%;
@@ -258,32 +431,67 @@ div.Featured-Thesis p {
   line-height: 1.5;
   }
 
+div.NonFeatured-Theses {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin-top: 1rem;
+  margin-right: .25rem;
+}
 
 div.Side-Thesis {
   display: flex;
-  width: 26.4rem;
-  height: 10.5rem;
-  flex: 1 1 auto;
   align-items: center;
-  margin-top: 2rem;
 }
 
 div.thesis-image {
-  width: 40%;
+  min-width: 25%;
+  max-width: 25%;
   margin: 1rem;
 }
 
 div.thesis-image img {
   width: 100%;
-
-}
-
-div.thesis-text {
-  width: 60%;
 }
 
 div.thesis-text h3 {
+  font-size: 1.5rem;
   font-weight: 700;
+}
+
+
+@media only screen and (max-width: 800px) {
+  div.ThesisTitle p {
+    font-size: 1.5rem;
+  }
+
+  div.Thesis-Section h3 {
+    font-size: 1rem;
+  }
+  div.Featured-Thesis h3 {
+    padding-top: .5rem;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  div.Thesis-Section {
+    border: 1px solid lightgray;
+  }
+
+  div.NonFeatured-Theses {
+    display: none;
+  }
+  div.Featured-Thesis {
+    width: 100%;
+    border: 0;
+  }
+  div.Featured-Thesis video {
+    width: 100%;
+    border: 0;
+  }
+  div.Featured-Thesis .Featured-Title, .Featured-Quote {
+    display: none;
+  }
 }
 
 /*Footer*/
@@ -303,4 +511,15 @@ div.Copyright {
 div.Terms {
   padding-top: 1.5rem;
   padding-right: 1.5rem;
+}
+
+@media only screen and (max-width: 500px) {
+  div.Footer {
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  div.Terms {
+    display: none;
+  }
 }
